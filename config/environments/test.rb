@@ -37,6 +37,13 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+SampleApp::Application.configure do
+  # Speed up tests by lowering BCrypt's cost function.
+  require 'bcrypt'
+  silence_warnings do
+    BCrypt::Engine::DEFAULT_COST = BCrypt::Engine::MIN_COST
+  end
+end
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
