@@ -8,10 +8,14 @@ feature "Static pages" , :type => :feature do
       visit '/static_pages/home'
       page.should have_selector('h1', :text => 'Sample App')
     end
-    scenario "should have the title 'Home'" do
+    scenario "should have the base title" do
       visit '/static_pages/home'
-      page.should have_title('Ruby on Rails Tutorial Sample App | Home')
+      page.should have_title('Ruby on Rails Tutorial Sample App')
   end
+   scenario "should not have a custom page title" do
+      visit '/static_pages/home'
+      page.should_not have_title('| Home')
+    end
 end
   feature "Help page" , :type => :feature do
 

@@ -38,6 +38,10 @@ group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'childprocess'
+  gem 'spork-rails', git: 'https://github.com/sporkrb/spork-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -47,4 +51,6 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'rb-fsevent' , :require => false
+  gem 'growl'
 end
