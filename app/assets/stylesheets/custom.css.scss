@@ -1,11 +1,14 @@
 @import "bootstrap" ;
 
+<<<<<<< HEAD
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
 $grayLight: #999;
 $grayDarker: #555;
 
+=======
+>>>>>>> modelling-users
 /* universal */
 
 html {
@@ -26,6 +29,7 @@ textarea {
 
 .center {
   text-align: center;
+<<<<<<< HEAD
   h1 {
     margin-bottom: 10px;
   }
@@ -101,4 +105,41 @@ footer {
       margin-left: 10px;
     }
   }
+=======
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+>>>>>>> modelling-users
 }
