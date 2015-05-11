@@ -1,25 +1,21 @@
 require 'spec_helper'
 
-describe "Static pages" do
+feature "Static pages" , :type => :feature do 
 
-  describe "Home page" do
+  scenario "Home page" 
 
-    it "should have the h1 'Sample App'" do
+    scenario "should have the h1 'Sample App'" 
       visit root_path
       page.should have_selector('h1', text: 'Sample App')
     end
 
-    it "should have the base title" do
+    scenario "should have the base title" 
       visit root_path
-      page.should have_selector('title',
-                        text: "Ruby on Rails Tutorial Sample App")
-    end
+      page.should have_title("Ruby on Rails Tutorial Sample App")
 
-    it "should not have a custom page title" do
+    scenario "should not have a custom page title" 
       visit root_path
-      page.should_not have_selector('title', text: '| Home')
-    end
-  end
+      page.should_not have_title('| Home')
 
   describe "Help page" do
 
